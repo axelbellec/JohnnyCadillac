@@ -20,7 +20,7 @@ const pastelColors = [
 
 // TODO: handle box dimensions using flexbox algorithm
 const boxStyle = (box) => ({
-  backgroundColor: pastelColors[box.id],
+  backgroundColor: box.quota > 0 ? 'transparent' : pastelColors[box.id],
   width: Dimensions.get('window').width / 3 - 2,
   height: Dimensions.get('window').width / 3 - 2,
   justifyContent: 'center',
@@ -59,6 +59,7 @@ export default class Box extends Component {
   render () {
     return (
       <TouchableHighlight
+        underlayColor='white'
         onPress={this._handlePress.bind(this)}
       >
         <View style={boxStyle(this.props.box)}>
