@@ -1,0 +1,56 @@
+[
+	{
+		"id": 1,
+		"text": "attention mes lunettes",
+		"sound": "attention_mes_lunettes.mp3",
+		"quota": 0
+	},
+	{
+		"id": 2,
+		"text": "bing bing",
+		"sound": "bing_bing.mp3",
+		"quota": 0
+	},
+	{
+		"id": 3,
+		"text": "ca marche bien",
+		"sound": "ca_marche_bien.mp3",
+		"quota": 0
+	},
+	{
+		"id": 4,
+		"text": "ca mon ami",
+		"sound": "ca_mon_ami.mp3",
+		"quota": 0
+	},
+	{
+		"id": 5,
+		"text": "ebk",
+		"sound": "ebk.mp3",
+		"quota": 20
+	},
+	{
+		"id": 6,
+		"text": "gauche dans sa tronche",
+		"sound": "gauche_dans_sa_tronche.mp3",
+		"quota": 0
+	},
+	{
+		"id": 7,
+		"text": "il est calé",
+		"sound": "il_est_cale.mp3",
+		"quota": 90
+	},
+	{
+		"id": 8,
+		"text": "il sait pas",
+		"sound": "il_sait_pas.mp3",
+		"quota": 0
+	},
+	{
+		"id": 9,
+		"text": "il tombait mal",
+		"sound": "il_tombait_mal.mp3",
+		"quota": 0
+	}
+]
