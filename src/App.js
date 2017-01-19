@@ -36,18 +36,37 @@ export default class App extends Component {
   }
 
 
-  _updateQuota () {
+  _updateQuota (id) {
     const updatedBoxes = _.forEach(this.state.boxes, (obj) => {
-      if (obj.quota > 0) obj.quota = obj.quota - 1
+
+      // When the user pressed a recently unlocked box, we update the property with a false
+      // flag (this removes the "NEW" corner label)
+      if (obj.quota === 0 && obj.recently_unlocked === true && obj.id === id) {
+        obj.quota = -1
+        if (obj.id === id) obj.recently_unlocked = false
+      }
+
+
+      // When a user touches a locked box, we decrement 1 unit
+      if (obj.quota > 0) {
+        obj.quota = obj.quota - 1
+        // If the user reach the limit, we update recently_unlocked prop to true
+        if (obj.quota === 0) obj.recently_unlocked = true
+      }
     })
     this.setState({boxes: updatedBoxes})
   }
 
 
   onBoxPress (box) {
-    console.log(box.text)
+    console.log(box.id, box.text)
+    // Each time a box is pressed, we update the state and decrement the threshold requested for each locked boxes
     this._updateQuota(box.id)
-    playSound(box.sound)
+
+    // Only play sounds for unlocked boxes
+    if (box.quota <= 0) playSound(box.sound)
+
+    // Update the global click counter
   	this.setState({clicks: this.state.clicks + 1})
   }
 

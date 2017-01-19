@@ -3,54 +3,63 @@
 		"id": 1,
 		"text": "attention mes lunettes",
 		"sound": "attention_mes_lunettes.mp3",
-		"quota": 0
+		"quota": 0,
+		"recently_unlocked": false
 	},
 	{
 		"id": 2,
 		"text": "bing bing",
 		"sound": "bing_bing.mp3",
-		"quota": 0
+		"quota": 10,
+		"recently_unlocked": false
 	},
 	{
 		"id": 3,
 		"text": "ca marche bien",
 		"sound": "ca_marche_bien.mp3",
-		"quota": 0
+		"quota": 0,
+		"recently_unlocked": false
 	},
 	{
 		"id": 4,
 		"text": "ca mon ami",
 		"sound": "ca_mon_ami.mp3",
-		"quota": 0
+		"quota": 0,
+		"recently_unlocked": false
 	},
 	{
 		"id": 5,
 		"text": "ebk",
 		"sound": "ebk.mp3",
-		"quota": 20
+		"quota": 20,
+		"recently_unlocked": false
 	},
 	{
 		"id": 6,
 		"text": "gauche dans sa tronche",
 		"sound": "gauche_dans_sa_tronche.mp3",
-		"quota": 0
+		"quota": 0,
+		"recently_unlocked": false
 	},
 	{
 		"id": 7,
 		"text": "il est calé",
 		"sound": "il_est_cale.mp3",
-		"quota": 90
+		"quota": 35,
+		"recently_unlocked": false
 	},
 	{
 		"id": 8,
 		"text": "il sait pas",
 		"sound": "il_sait_pas.mp3",
-		"quota": 0
+		"quota": 0,
+		"recently_unlocked": false
 	},
 	{
 		"id": 9,
 		"text": "il tombait mal",
 		"sound": "il_tombait_mal.mp3",
-		"quota": 0
+		"quota": 0,
+		"recently_unlocked": false
 	}
 ]

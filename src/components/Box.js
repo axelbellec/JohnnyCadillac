@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { View, Text, TouchableHighlight, Dimensions, StyleSheet } from 'react-native'
 
 import Icon from 'react-native-vector-icons/MaterialIcons'
+import CornerLabel from 'react-native-smart-corner-label'
 
 const pastelColors = [
   '#EF5350',
@@ -18,13 +19,12 @@ const pastelColors = [
 
 
 // TODO: handle box dimensions using flexbox algorithm
-const boxStyle = (i) => ({
-  backgroundColor: pastelColors[i],
+const boxStyle = (box) => ({
+  backgroundColor: pastelColors[box.id],
   width: Dimensions.get('window').width / 3 - 2,
   height: Dimensions.get('window').width / 3 - 2,
   justifyContent: 'center',
   alignItems: 'center'
-
 })
 
 export default class Box extends Component {
@@ -41,12 +41,28 @@ export default class Box extends Component {
     }
   }
 
+  _renderTabLabel () {
+    if (this.props.box.recently_unlocked) {
+      return (
+        <CornerLabel
+                  alignment='right'
+                  cornerRadius={40}
+                  style={{backgroundColor: 'white', borderRadius: 20}}
+        >
+          <Icon name='lock-open' iconStyle={{marginTop: 10}} size={20} color='black' />
+        </CornerLabel>
+      )
+    }
+    return
+  }
+
   render () {
     return (
       <TouchableHighlight
         onPress={this._handlePress.bind(this)}
       >
-        <View style={boxStyle(this.props.box.id)}>
+        <View style={boxStyle(this.props.box)}>
+          {this._renderTabLabel()}
           <Text style={styles.text}>{this._renderText()}</Text>
         </View>
       </TouchableHighlight>
